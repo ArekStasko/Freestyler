@@ -1,0 +1,113 @@
+.random_image-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.random_image-wrapper{
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    background: rgb(0,0,0);
+background: linear-gradient(340deg, rgba(0,0,0,1) 91%, rgba(255,255,255,1) 91%, rgba(255,255,255,1) 93%, rgba(0,0,0,1) 93%);
+    box-shadow: 6px 6px 5px -2px rgba(153,130,153,1);
+}
+
+.random_image-wrapper div{
+    width: 290px;
+    height: 400px;
+    margin-top: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.random_text-wrapper{
+    text-align: center;
+}
+
+.random_text-wrapper h2{
+    font-size: 60px;
+}
+
+@media (min-width: 427px) {
+    .random_image-wrapper{
+        width: 100%;
+        max-width: 500px;
+        height: 400px;
+    }
+    
+    .random_image-wrapper div{
+        width: 450px;
+    }
+ }
+
+ @media (min-width: 1025px) {
+    .random_image-wrapper{
+        width: 100%;
+        max-width: 700px;
+        height: 500px;
+    }
+    
+    .random_image-wrapper div{
+        width: 90%;
+    }
+
+    .random_text-wrapper h2{
+        font-size: 120px;
+    }
+ }
+
+.kotki{
+    background-image: url("../../assets/kotki.jpg") ;
+}
+
+.pobrane{
+    background-image: url("../../assets/pobrane.jpg") ;
+}
+
+.bongo{
+    background-image: url("../../assets/bongo.jpg") ;
+}
+
+.chlopaki{
+    background-image: url("../../assets/chlopaki.jpg") ;
+}
+
+.gitara{
+    background-image: url("../../assets/gitara.jpg") ;
+}
+
+.klamka{
+    background-image: url("../../assets/klamka.jpg") ;
+}
+
+.mickiewicz{
+    background-image: url("../../assets/mickiewicz.jpg") ;
+}
+
+.pies{
+    background-image: url("../../assets/pies.jpg") ;
+}
+
+.policja{
+    background-image: url("../../assets/policja.jpg") ;
+}
+
+.pozar{
+    background-image: url("../../assets/pozar.jpeg") ;
+}
+
+.psychiatryk{
+    background-image: url("../../assets/psychiatryk.jpg") ;
+}
+
+.soplica.jpg{
+    background-image: url("../../assets/soplica.jpg") ;
+}
