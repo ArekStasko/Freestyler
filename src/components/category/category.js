@@ -1,51 +1,49 @@
 import React, { useState, } from 'react';
-import Countdown from 'react-countdown';
+import RandomText from '../random/randomText'
 import RandomGraphic from '../random/randomGraphic'
-//import TimeOut from '../timeOut/timeOut'
 import './styles.css';
 
-const Graphic = () =>{
-    const [value, setValue] = useState()
+const Category = ({show}) =>{
     const [showEffect, setEffect] = useState() 
+    const [sec, setSec] = useState() 
 
-    const handleChange = e =>{
-        setValue(Number(e.target.value * 60))
+    const handleSubmit = () =>{
+        setEffect(!showEffect)
     }
 
-    const handleSubmit = (e) =>{
-        setEffect(!showEffect)
-        e.preventDefault()
-    }
-    
-    const completeFun = () => {
-        setEffect(!showEffect)
-    };
+  
 
         return(
             <div className='main-container'>
                 <div className='main_text-wrapper'>
-                   <h2>Wylosuj obraz</h2>
-                   <form onSubmit={handleSubmit} className='form-wrapper'>
-                       <label for='time'>Wybierz czas rundy</label>
+                   <h2>Wylosuj {show?'temat':'obraz'}</h2>
+                   
+                    <div className='form-wrapper'>
+                       <p>Wybierz czas rundy</p>
 
-                       <input className='form_time-input' required onChange={handleChange} min="1" max="10" id='time' type='number'/>
+                       <input className='form_time-input' value={sec} onChange={e=>setSec(parseInt(e.target.value))} type='number'/>
                    
                        {
                            showEffect ? (
-                            <button className='random_graphic-btn' type='submit'>Przerwij</button>
+                            <button onClick={handleSubmit} className='random_graphic-btn'>Przerwij</button>
                            ) : (
-                            <button className='random_graphic-btn' type='submit'>Losuj</button>
+                            <button onClick={handleSubmit} className='random_graphic-btn'>Losuj</button>
                            )
                        }
-                   </form>
+                   </div>
                 </div>
             {showEffect ? (
                 <div className='main_effect-wrapper'>
-                    <Countdown onComplete={completeFun}	className='timer' date={Date.now() + (value/60) * 60000}/>
-                    <RandomGraphic/>
+                    {
+                        show ? (
+                            <RandomText/>
+                        ) : (
+                            <RandomGraphic/>
+                        )
+                    }
                 </div>
             ):(
-            <div className='result_graphic-wrapper'>
+                <div className='result_text-wrapper'>
                 <h2>Witam na stronie Freestyler</h2>
                 <h3>Freestyler ma za zadanie pomóc ci 
                     zorganizować bitwę freestylową, czy to 
@@ -72,4 +70,4 @@ const Graphic = () =>{
         ) 
 }
 
-export default Graphic;
+export default Category;
