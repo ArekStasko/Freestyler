@@ -1,0 +1,12 @@
+.graphic-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__wrapper{
+ max-width: 400px;
+ max-height: 400px;
+ border-radius: 10px;
+    }
+}

@@ -1,5 +1,6 @@
 import './App.css';
 import MainPage from './mainPage/mainPage'
+import './styles/themes/default/theme.scss'
 
 
 function App() {

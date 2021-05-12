@@ -14,9 +14,9 @@ const RandomText = ({sec, setEffect, showEffect}) => {
     }
     
     return(
-        <div className='random_text-wrapper'>
+        <div className='text-container'>
             <h2>{ topic }</h2>
-            <div className="random_text-timer">
+            <div className="text-container__wrapper">
             <CountdownCircleTimer
                 isPlaying
                 duration={sec}

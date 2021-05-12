@@ -2,43 +2,44 @@ import React, { useState } from "react";
 import RandomText from "../random/randomText";
 import RandomGraphic from "../random/randomGraphic";
 import { RestfulProvider } from "restful-react"
-import "./styles.css";
 
 const Category = ({ show }) => {
   const [showEffect, setEffect] = useState();
   const [sec, setSec] = useState();
 
-  const handleSubmit = () => {
+  const handleSubmit = e => {
+    e.preventDefault()
     setEffect(!showEffect);
   };
 
   return (
-    <div className="main-container">
-      <div className="main_text-wrapper">
+    <div className="container">
+      <div className="container__text-wrapper">
         <h2>Wylosuj {show ? "temat" : "obraz"}</h2>
 
-        <div className="form-wrapper">
+        <form onSubmit={handleSubmit} className="container__text-wrapper--form">
           <p>Wybierz czas rundy</p>
 
           <input
-            className="form_time-input"
+            className="container__text-wrapper--form--input"
             onChange={(e) => setSec(parseInt(e.target.value))}
+            required
             type="number"
           />
 
           {showEffect ? (
-            <button onClick={handleSubmit} className="random_graphic-btn">
+            <button type='submit' className="container__text-wrapper--form--btn">
               Przerwij
             </button>
           ) : (
-            <button onClick={handleSubmit} className="random_graphic-btn">
+            <button type='submit' className="container__text-wrapper--form--btn">
               Losuj
             </button>
           )}
-        </div>
+        </form>
       </div>
       {showEffect ? (
-        <div className="main_effect-wrapper">
+        <div className="container__effect-wrapper">
           {show ? (
               <RandomText sec={sec} setEffect={setEffect} showEffect={showEffect} />
           ) : (
@@ -48,7 +49,7 @@ const Category = ({ show }) => {
           )}
         </div>
       ) : (
-        <div className="result_text-wrapper">
+        <div className="container__effect-wrapper--result">
           <h2>Witam na stronie Freestyler</h2>
           <h3>
             Freestyler ma za zadanie pomóc ci zorganizować bitwę freestylową,

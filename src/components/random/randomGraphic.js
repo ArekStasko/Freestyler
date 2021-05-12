@@ -1,7 +1,6 @@
 import React from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { useGet } from "restful-react";
-import "./styles.css";
 const {REACT_APP_UNSPLASH_KEY} = process.env;
 
 const RandomGraphic = ({ sec, setEffect, showEffect }) => {
@@ -11,7 +10,6 @@ const RandomGraphic = ({ sec, setEffect, showEffect }) => {
       setEffect(!showEffect);
     }, 1000);
   };
-  //https://api.unsplash.com/photos/random/?client_id=nvBikEUhJ6KijxVtvEE7JClN8Ni4dmTVYxv-6f-pAMo
 
   const { data: randomImage, loading } = useGet({
     path: `/photos/random/?client_id=${REACT_APP_UNSPLASH_KEY}`,
@@ -22,8 +20,8 @@ const RandomGraphic = ({ sec, setEffect, showEffect }) => {
       {loading ? (
         <div>Loading</div>
       ) : (
-        <div className="main_graphic-container">
-          <img alt="random" src={randomImage.urls.small} className="main_graphic-wrapper"/>
+        <div className="graphic-container">
+          <img alt="random" src={randomImage.urls.small} className="graphic-wrapper"/>
           <div className="random_text-timer">
             <CountdownCircleTimer
               isPlaying

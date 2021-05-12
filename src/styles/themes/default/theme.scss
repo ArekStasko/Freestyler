@@ -1,0 +1,12 @@
+@import '../../variables';
+@import '../../fonts';
+@import '../../global';
+@import '../../mixins';
+
+/* import components styles */ 
+
+@import './components/category';
+@import './components/navbar';
+@import './components/randomGraphic';
+@import './components/randomText';
+@import './components/mainPage';
