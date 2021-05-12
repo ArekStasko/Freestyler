@@ -19,24 +19,24 @@
         height: 60px;
         border-radius: 50px;
         border: none;
-        color: white;
+        color: $c-white;
         background-color: black;
-        border: 1px solid white;
+        border: 1px solid $c-white;
         cursor: pointer;
         outline: none;
+        transition: all ease-in-out 0.5s;
 
         i {
-          font-size: 25px;
+          font-size: pxToRem(25);
         }
 
         &:hover {
           animation-name: spin;
           animation-duration: 1s;
           animation-timing-function: linear;
-          transition: all ease-in-out 0.5s;
           color: black;
           border: 1px solid black;
-          background-color: white;
+          background-color: $c-white;
         }
       }
     }
@@ -53,14 +53,14 @@
                 height: 80px;
                 border-radius: 50px;
                 border: none;
-                color: white;
+                color: $c-white;
                 background-color: black;
-                border: 1px solid white;
+                border: 1px solid $c-white;
                 cursor: pointer;
                 outline: none;
 
                 i {
-                    font-size: 35px;
+                    font-size: pxToRem(35);
                   }
            
             }

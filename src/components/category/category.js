@@ -18,13 +18,14 @@ const Category = ({ show }) => {
         <h2>Wylosuj {show ? "temat" : "obraz"}</h2>
 
         <form onSubmit={handleSubmit} className="container__text-wrapper--form">
-          <p>Wybierz czas rundy</p>
+          <label htmlFor="timeValue">Wybierz czas rundy</label>
 
           <input
             className="container__text-wrapper--form--input"
             onChange={(e) => setSec(parseInt(e.target.value))}
             required
             type="number"
+            id="timeValue"
           />
 
           {showEffect ? (

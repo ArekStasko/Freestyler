@@ -12,7 +12,7 @@ const [show, setShow] = useState(true)
       <div className='page-container__wrapper'>
       <div className='page-container__wrapper--form'>
          <button onClick={()=>setShow(!show)} className='page-container__wrapper--form--btn'>
-           <i class="fas fa-sync-alt"></i>
+           <i className="fas fa-sync-alt"></i>
          </button>          
       </div>
 <Category show={show}/>

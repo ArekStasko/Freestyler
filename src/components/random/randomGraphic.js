@@ -21,8 +21,8 @@ const RandomGraphic = ({ sec, setEffect, showEffect }) => {
         <div>Loading</div>
       ) : (
         <div className="graphic-container">
-          <img alt="random" src={randomImage.urls.small} className="graphic-wrapper"/>
-          <div className="random_text-timer">
+          <img alt="random" src={randomImage.urls.small} className="graphic-container__image"/>
+          <div className="graphic-container__timer">
             <CountdownCircleTimer
               isPlaying
               duration={sec}

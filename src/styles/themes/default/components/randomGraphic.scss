@@ -1,12 +1,16 @@
-.graphic-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.graphic-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    &__wrapper{
- max-width: 400px;
- max-height: 400px;
- border-radius: 10px;
-    }
+  &__image {
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 10px;
+  }
+
+  &__timer {
+    margin-top: 20px;
+  }
 }

@@ -3,7 +3,7 @@ function Navbar() {
     <div className="navbar">
     <h3>By Arkadiusz Staśko</h3>
     <h1>Freestyler</h1>
-    <p>beta 1.0</p>
+    <p>2.0</p>
     </div>
   );
 }

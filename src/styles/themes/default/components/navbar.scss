@@ -3,9 +3,9 @@
     justify-content: space-evenly;
     position: fixed; 
     top: 0; 
-    background-color: white;
+    background-color: $c-white;
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $c-black;
     height: 70px;
     align-items: center;
     box-shadow: 2px 6px 5px -5px rgba(153,130,153,1);
